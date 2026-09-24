@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }} - PocketSmart AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🤖 PocketSmart AI</h1>
+
+    <h2>{{ title }}</h2>
+
+    <div class="result-card">
+
+        <p>
+            <strong>Category:</strong>
+            {{ result.category }}
+        </p>
+
+        <p>
+            <strong>Budget:</strong>
+            {{ result.budget }}
+        </p>
+
+        {% if result.room %}
+        <p>
+            <strong>Room:</strong>
+            {{ result.room }}
+        </p>
+        {% endif %}
+
+        {% if result.style %}
+        <p>
+            <strong>Style:</strong>
+            {{ result.style }}
+        </p>
+        {% endif %}
+
+        {% if result.guests %}
+        <p>
+            <strong>Guests:</strong>
+            {{ result.guests }}
+        </p>
+        {% endif %}
+
+        {% if result.event_type %}
+        <p>
+            <strong>Event:</strong>
+            {{ result.event_type }}
+        </p>
+        {% endif %}
+
+        {% if result.occasion %}
+        <p>
+            <strong>Occasion:</strong>
+            {{ result.occasion }}
+        </p>
+        {% endif %}
+
+        <hr>
+
+        <h3>✨ AI Recommendation</h3>
+
+        <div class="recommendation">
+    {{ result.recommendation | safe }}
+</div>
+    </div>
+
+    <br>
+
+    <a href="/">
+        <button>⬅ Back to Home</button>
+    </a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PocketSmart AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🤖 PocketSmart AI</h1>
+    <p>Budget-aware AI recommendation assistant</p>
+
+    <h2>🏠 Home Recommendation</h2>
+
+    <form action="/generate-home" method="post">
+        <input type="number" name="budget" placeholder="Budget" required>
+        <input type="text" name="room" placeholder="Room" required>
+        <input type="text" name="style" placeholder="Style">
+
+        <button type="submit">
+            Generate Home Recommendation
+        </button>
+    </form>
+
+
+    <h2>🎉 Party Recommendation</h2>
+
+    <form action="/generate-party" method="post">
+        <input type="number" name="budget" placeholder="Budget" required>
+        <input type="number" name="guests" placeholder="Number of Guests" required>
+        <input type="text" name="event_type" placeholder="Event Type" required>
+
+        <button type="submit">
+            Generate Party Recommendation
+        </button>
+    </form>
+
+
+    <h2>💎 Jewelry Recommendation</h2>
+
+    <form action="/generate-jewelry" method="post">
+        <input type="number" name="budget" placeholder="Budget" required>
+        <input type="text" name="occasion" placeholder="Occasion" required>
+
+        <button type="submit">
+            Generate Jewelry Recommendation
+        </button>
+    </form>
+
+</div>
+
+</body>
+</html>
